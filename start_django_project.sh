@@ -1,7 +1,7 @@
 #!/bin/bash
 #
-# Copyright Luca Buoncristiani 2024
-# ogni diritto riservato
+# Luca Buoncristiani 2024
+# released with MIT License
 
 
 
