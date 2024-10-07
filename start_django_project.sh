@@ -10,6 +10,12 @@
 # ed il suo virtualenv
 
 
+
+# Creazione cartella di lavoro
+mkdir output
+cd output
+
+
 # Variables
 # PROJECT=${1-myproject}
 APACHE_LOG_DIR=/var/log/apache2
