@@ -288,5 +288,22 @@ echo "${red}>>> ${TEMPLATE_NAME} - ${PWD} ${reset}"
 cd ${TEMPLATE_NAME} || die "Errore: cartella ${TEMPLATE_NAME} non esiste"
 pipenv run ./manage.py collectstatic # --noinput
 
+echo "${green}>>> Collecting static files ... ${reset}"
+pipenv run ./manage.py makemigrations
 
+echo "${green}>>> Collecting static files ... ${reset}"
+pipenv run ./manage.py migrate
+
+echo "${green}>>> Collecting static files ... ${reset}"
+pipenv run ./manage.py createsuperuser
+
+# setup git
+echo "${green}>>> Configurazione Git ... ${reset}"
+git init
+git add .
+git commit -m "Initial commit"
+
+echo "${green}>>> ${DJANGO_PROJECT_NAME} è pronto! ${reset}"
+
+pipenv run ./manage.py runserver
 
